@@ -9,12 +9,18 @@
   <body>
     <main class="shell">
       <header class="masthead">
-        <p class="motto">
-          "They shall be my finest warriors, these men who give themselves to
-          me. Like clay I shall mould them and in the furnace of war forge
-          them... They are my Space Marines and they shall know no fear."
-        </p>
         <h1 class="logo">Trial of the Astartes</h1>
+        <p class="motto">
+          "They shall be my finest warriors, these men who give of themselves to
+          me. Like clay I shall mould them, and in the furnace of war forge
+          them. They will be of iron will and steely muscle. In great armour
+          shall I clad them and with the mightiest guns will they be armed. They
+          will be untouched by plague or disease, no sickness will blight them.
+          They will have tactics, strategies and machines so that no foe can
+          best them in battle. They are my bulwark against the Terror. They are
+          the Defenders of Humanity. They are my Space Marines and they shall
+          know no fear."
+        </p>
       </header>
 
       <!-- START SCREEN -->
@@ -25,14 +31,14 @@
             Before you can wear the armour of the Adeptus Astartes, you must
             prove your knowledge of the Space Marines. Answer ten questions
             about the Chapters, Primarchs, gene-seed and wargear of the
-            Emperor's Angels of Death, drawn at random from fifteen. Every
+            Emperor's Angels of Death, drawn at random from fifty. Every
             question has a countdown.
           </p>
           <h2>How to play</h2>
           <ol>
             <li>Enter your name and press <strong>Begin the trial</strong>.</li>
             <li>
-              Pick one answer before the timer runs out (15 seconds). You can
+              Pick one answer before the timer runs out (30 seconds). You can
               also press 1 to 4.
             </li>
             <li>
@@ -71,8 +77,8 @@
             <span id="score-text">Score: 0</span>
           </div>
           <div class="bar"><div id="time-bar"></div></div>
-          <p id="time-text" class="time">15s</p>
-          <h2 id="question"></h2>
+          <p id="time-text" class="time">30s</p>
+          <h2 id="question">Loading question...</h2>
           <div id="answers" class="answers"></div>
           <p id="feedback" class="feedback" aria-live="polite"></p>
           <button id="next-btn" class="btn primary hidden">
