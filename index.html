@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trial of the Astartes – Space Marine Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <p class="motto">
+          "They shall be my finest warriors, these men who give themselves to
+          me. Like clay I shall mould them and in the furnace of war forge
+          them... They are my Space Marines and they shall know no fear."
+        </p>
+        <h1 class="logo">Trial of the Astartes</h1>
+      </header>
+
+      <!-- START SCREEN -->
+      <section id="start-screen" class="screen">
+        <div class="panel intro">
+          <h2>The Trial</h2>
+          <p>
+            Before you can wear the armour of the Adeptus Astartes, you must
+            prove your knowledge of the Space Marines. Answer ten questions
+            about the Chapters, Primarchs, gene-seed and wargear of the
+            Emperor's Angels of Death, drawn at random from fifteen. Every
+            question has a countdown.
+          </p>
+          <h2>How to play</h2>
+          <ol>
+            <li>Enter your name and press <strong>Begin the trial</strong>.</li>
+            <li>
+              Pick one answer before the timer runs out (15 seconds). You can
+              also press 1 to 4.
+            </li>
+            <li>
+              A correct answer earns 10 points, plus bonuses for speed and for
+              unbroken streaks.
+            </li>
+            <li>
+              Your best score and recent trials are recorded in this browser.
+            </li>
+          </ol>
+          <label for="player-name">Your name</label>
+          <input
+            id="player-name"
+            type="text"
+            maxlength="16"
+            placeholder="Aspirant"
+          />
+          <button id="start-btn" class="btn primary">Begin the trial</button>
+        </div>
+
+        <aside class="panel board">
+          <h2>Highest score</h2>
+          <p id="best-score" class="big">0</p>
+          <h2>Recent trials</h2>
+          <ul id="history"></ul>
+          <button id="clear-btn" class="btn ghost">Purge records</button>
+        </aside>
+      </section>
+
+      <!-- QUIZ SCREEN -->
+      <section id="quiz-screen" class="screen hidden">
+        <div class="panel quiz">
+          <div class="topbar">
+            <span id="progress-text">Question 1 / 10</span>
+            <span id="streak-text">Streak: 0</span>
+            <span id="score-text">Score: 0</span>
+          </div>
+          <div class="bar"><div id="time-bar"></div></div>
+          <p id="time-text" class="time">15s</p>
+          <h2 id="question"></h2>
+          <div id="answers" class="answers"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="next-btn" class="btn primary hidden">
+            Next question
+          </button>
+        </div>
+      </section>
+
+      <!-- RESULT SCREEN -->
+      <section id="result-screen" class="screen hidden">
+        <div class="panel result">
+          <p class="rank-label">Your rank in the Chapter</p>
+          <h2 id="result-title">Finished</h2>
+          <p id="result-score" class="big"></p>
+          <p id="result-detail"></p>
+          <p id="result-record" class="record"></p>
+          <div class="row">
+            <button id="again-btn" class="btn primary">
+              Face another trial
+            </button>
+            <button id="menu-btn" class="btn ghost">
+              Back to the Fortress-Monastery
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="fineprint">
+        Fan-made student project. Warhammer 40,000 is a trademark of Games
+        Workshop; this game is not affiliated with or endorsed by them.
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
